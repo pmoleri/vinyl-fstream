@@ -2,6 +2,8 @@
 
 It takes a [fstream](https://github.com/npm/fstream) as input and returns a gulp stream of [vinyl](https://github.com/gulpjs/vinyl) files.
 
+[![Build Status](https://travis-ci.org/pmoleri/vinyl-fstream.svg?branch=master)](https://travis-ci.org/pmoleri/vinyl-fstream)
+
 ## Examples
 
 ### Copy a directory
