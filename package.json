@@ -1,7 +1,7 @@
 {
   "name": "vinyl-fstream",
-  "version": "1.0.2",
-  "description": "A vinyl adapter to read from fstreams or write fstreams",
+  "version": "1.0.3",
+  "description": "A vinyl adapter to read from fstream into gulp pipelines",
   "main": "lib/adapter.js",
   "dependencies": {
     "clone-stats": "0.0.1",
