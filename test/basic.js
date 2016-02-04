@@ -1,17 +1,18 @@
 "use strict";
 
-const fstream = require("fstream");
-const vfs = require("../lib/adapter");
-const File = require("vinyl");
-const expect = require("chai").expect;
+import fstream from "fstream";
+import vfs from "../lib/adapter";
+import File from "vinyl";
+import {expect} from "chai";
 
 describe("When reading a fstream", function () {
 
     const vinylFiles = [];
     before(function(done) {
+        this.timeout(15*1000);
         vfs.src(fstream.Reader("./"))
-            .on('data', (f) => {vinylFiles.push(f)})
-            .on('finish', done);
+            .on('finish', done)
+            .on('data', (f) => {vinylFiles.push(f)});
     });
 
     it("to have files", function() {

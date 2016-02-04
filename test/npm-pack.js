@@ -1,14 +1,15 @@
 "use strict";
 
-const packer = require("fstream-npm");
-const vfs = require("../lib/adapter");
-const File = require("vinyl");
-const expect = require("chai").expect;
+import packer from "fstream-npm";
+import vfs from "../lib/adapter";
+import File from "vinyl";
+import {expect} from "chai";
 
 describe("When packaging with fstream-npm", function () {
 
     const vinylFiles = [];
     before(function(done) {
+        this.timeout(15*1000);
         vfs.src(packer("./"))
             .on('data', (f) => {vinylFiles.push(f)})
             .on('finish', done);
