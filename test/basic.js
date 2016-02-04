@@ -9,9 +9,9 @@ describe("When reading a fstream", function () {
 
     const vinylFiles = [];
     before(function(done) {
-        this.timeout(15*1000);
+        this.timeout(20*1000);
         vfs.src(fstream.Reader("./"))
-            .on('finish', done)
+            .on('end', done)
             .on('data', (f) => {vinylFiles.push(f)});
     });
 

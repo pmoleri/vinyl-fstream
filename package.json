@@ -20,8 +20,9 @@
     "mocha": "^2.4.5"
   },
   "scripts": {
-    "test": "mocha",
     "compile": "babel src --out-dir lib",
+    "pretest": "npm run compile",
+    "test": "mocha",
     "prepublish": "npm run compile"
   },
   "keywords": [
