@@ -2,7 +2,7 @@
 
 It takes a [fstream](https://github.com/npm/fstream) as input and returns a gulp stream of [vinyl](https://github.com/gulpjs/vinyl) files.
 
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status](https://travis-ci.org/pmoleri/vinyl-fstream.svg?branch=master)](https://travis-ci.org/pmoleri/vinyl-fstream)
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
 ## Examples
 
@@ -41,3 +41,9 @@ Note: _fstream-npm_ takes in consideration `.npmignore` and package.json `files`
 **options** (optional): It accepts the "read" and "buffer" options of [vinyl-fs](https://github.com/gulpjs/vinyl-fs).
 
 Note: Usually _fstream_ entries are consumed one at a time and _fstream_'s api doesn't state if entries can be consumed simultaneously, so use `buffer: false` under your own risk.
+
+[npm-url]: https://npmjs.org/package/vinyl-fstream
+[npm-image]: http://img.shields.io/npm/v/vinyl-fstream.svg
+[downloads-image]: http://img.shields.io/npm/dm/vinyl-fstream.svg
+[travis-image]: https://travis-ci.org/pmoleri/vinyl-fstream.svg?branch=master
+[travis-url]: https://travis-ci.org/pmoleri/vinyl-fstream
