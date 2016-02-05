@@ -9,8 +9,7 @@ describe("When reading a fstream", function () {
 
     const vinylFiles = [];
     before(function(done) {
-        this.timeout(20*1000);
-        vfs.src(fstream.Reader("./"))
+        vfs.src(fstream.Reader("test/"))
             .on('end', done)
             .on('data', (f) => {vinylFiles.push(f)});
     });
@@ -21,16 +20,6 @@ describe("When reading a fstream", function () {
 
     it("every file to be a Vinyl", function() {
         expect(vinylFiles.every(File.isVinyl)).to.ok;
-    });
-
-    it("find a package.json file", function() {
-        let file;
-        for (let _file of vinylFiles) {
-            if (_file.basename === "package.json") {
-                file = _file;
-            }
-        }
-        expect(file).to.be.ok;
     });
 
     it("find current file", function() {

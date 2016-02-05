@@ -9,7 +9,7 @@ describe("When packaging with fstream-npm", function () {
 
     const vinylFiles = [];
     before(function(done) {
-        this.timeout(20*1000);
+        this.timeout(15*1000);
         vfs.src(packer("./"))
             .on('data', (f) => {vinylFiles.push(f)})
             .on('finish', done);

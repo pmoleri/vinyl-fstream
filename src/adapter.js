@@ -39,7 +39,7 @@ export function src(fStreams, options) {
         fStream.on('child', (entry, other) => {
             // Use .props to cope with "fstream-npm" that adds a "/package" to the path
             const entryPath = entry.props.path.split("\\").join("/");
-
+            
             if (opts.read && opts.buffer) {
                 // .collect() Overwrites the pipe method so it will pump all the
                 // stream at once. Otherwise, when a new child comes in, the
